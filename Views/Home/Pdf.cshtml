@@ -1,0 +1,43 @@
+﻿@using Reporting.Models
+@model IList<Employee>
+
+@{
+    ViewData["Title"] = "Pdf";
+}
+
+    <environment names="Development">
+        <link href="~/css/Employee/pdf.css" rel="stylesheet" asp-append-version="true" />
+        <script src="~/css/Employee/pdf.js" asp-append-version="true"></script>
+    </environment>
+
+
+<h1>Danh sách nhân viên</h1>
+
+<table id="employee-list">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Mã nhân viên</th>
+            <th>Tên nhân viên</th>
+            <th>Tuổi</th>
+            <th>Giới tính</th>
+            <th>Địa chỉ</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Code</td>
+                <td>@Html.Raw($"{item.FirstName} {item.LastName}")</td>
+                <td>@item.Age</td>
+                <td>@Html.Raw(item.Gender == true ? "Nam" : "Nữ")</td>
+                <td>@item.Address</td>
+                <td>
+                    <input type="button" id="btnEmployee@(item.Id)" value="Xuất Pdf" onclick="generalPdfFile(@item.Id)" />
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
