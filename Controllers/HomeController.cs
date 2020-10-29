@@ -1,5 +1,4 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -46,7 +45,7 @@ namespace Reporting.Controllers
         public async Task<IActionResult> ExportPdf(int id)
         {
             var model = _employee.GetEployeeById(id);
-            byte[] result = await _pdfConverter.Convert("Home/__PdfExport", model);
+            byte[] result = await _pdfConverter.Convert("Home/__PdfRender", model);
 
             return File(result, "application/pdf", $"Employee-{id}.pdf");
         }

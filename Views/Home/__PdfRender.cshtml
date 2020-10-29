@@ -1,0 +1,9 @@
+﻿@using Reporting.Models
+@model Employee
+
+    <div id="info-employee">
+        <p><span>Họ và tên: </span>@Html.Raw($"{Model.FirstName} {Model.LastName}") </p>
+        <p><span>Tuổi: </span>@Model.Age </p>
+        <p><span>Giới tính: </span>@Html.Raw(Model.Gender == true ? "Nam" : "Nữ") </p>
+        <p><span>Địa chỉ: </span>@Model.Address </p>
+    </div>

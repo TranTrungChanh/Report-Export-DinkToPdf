@@ -6,6 +6,5 @@ namespace Reporting.Models
     {
         public string ViewPath { get; set; }
         public ControllerContext Context { get; set; }
-        //public object Model { get; set; }
     }
 }

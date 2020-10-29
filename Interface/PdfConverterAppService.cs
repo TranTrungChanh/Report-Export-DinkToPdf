@@ -3,14 +3,11 @@ using DinkToPdf.Contracts;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Abstractions;
-using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.AspNetCore.Mvc.ViewEngines;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Routing;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using System;
 using System.IO;
 using System.Threading.Tasks;
@@ -56,14 +53,14 @@ namespace Reporting.Interface
             {
                 PagesCount = true,
                 HtmlContent = html,
-                WebSettings = { DefaultEncoding = "utf-8"/*, UserStyleSheet = Path.Combine(Directory.GetCurrentDirectory(), "css/Employee", "pdf.css")*/ },
+                WebSettings = { DefaultEncoding = "utf-8", UserStyleSheet = Path.Combine(Directory.GetCurrentDirectory(), "css/Employee", "pdf.css") },
                 FooterSettings = { FontSize = 10, Left = "PDF demo from JeminPro", Right = "Trang [page] trong [toPage]", Line = true },
             };
 
             var doc = new HtmlToPdfDocument()
             {
                 GlobalSettings = globalSettings,
-                Objects = { objectSettings },
+                Objects = { objectSettings }
             };
 
             byte[] result = _converter.Convert(doc);
