@@ -6160,11 +6160,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Demo\\Reporting\\Reporting\\Reporting.csproj",
+      "projectUniqueName": "D:\\Demo-ExportPdf\\Report-Export-DinkToPdf\\Reporting.csproj",
       "projectName": "Reporting",
-      "projectPath": "D:\\Demo\\Reporting\\Reporting\\Reporting.csproj",
+      "projectPath": "D:\\Demo-ExportPdf\\Report-Export-DinkToPdf\\Reporting.csproj",
       "packagesPath": "C:\\Users\\chanh\\.nuget\\packages\\",
-      "outputPath": "D:\\Demo\\Reporting\\Reporting\\obj\\",
+      "outputPath": "D:\\Demo-ExportPdf\\Report-Export-DinkToPdf\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
