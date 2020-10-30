@@ -41,8 +41,6 @@ namespace Reporting.Interface
         {
             var html = await RenderViewToString(viewPath, model);
 
-            var random = new Random();
-
             var globalSettings = new GlobalSettings()
             {
                 ColorMode = ColorMode.Color,
