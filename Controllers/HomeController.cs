@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -42,12 +43,15 @@ namespace Reporting.Controllers
             return View(result);
         }
 
+        [HttpPost]
         public async Task<IActionResult> ExportPdf(int id)
         {
             var model = _employee.GetEployeeById(id);
-            byte[] result = await _pdfConverter.Convert("Home/__PdfRender", model);
+            PdfResultDto result = new PdfResultDto();
+            result.ByteArray = await _pdfConverter.Convert("Home/__PdfRender", model);
+            result.FileName = $"Employee-{model.Id}.pdf";
 
-            return File(result, "application/pdf", $"Employee-{id}.pdf");
+            return Json(result);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
