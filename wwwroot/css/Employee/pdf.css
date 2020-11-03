@@ -6,3 +6,8 @@
     width: 100%;
     text-align: right;
 }
+
+p{
+    font-size: 20px;
+    color: red;
+}

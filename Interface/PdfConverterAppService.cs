@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.AspNetCore.Routing;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 
@@ -49,12 +50,20 @@ namespace Reporting.Interface
                 DocumentTitle = "PDF Report"
             };
 
+            List<string> itemLink = new List<string>();
+            itemLink.Add(Directory.GetCurrentDirectory());
+            itemLink.Add("wwwroot");
+            itemLink.Add("css");
+            itemLink.Add("Employee");
+            itemLink.Add("pdf.css");
+
+            var linkCss = Path.Combine(itemLink.ToArray());
             var objectSettings = new ObjectSettings
             {
                 PagesCount = true,
                 HtmlContent = html,
-                WebSettings = { DefaultEncoding = "utf-8", UserStyleSheet = Path.Combine(Directory.GetCurrentDirectory(), "css/Employee", "pdf.css") },
-                FooterSettings = { FontSize = 10, Left = "PDF demo from JeminPro", Right = "Trang [page] trong [toPage]", Line = true },
+                WebSettings = { DefaultEncoding = "utf-8", UserStyleSheet = linkCss },
+                FooterSettings = { FontSize = 10, Left = "PDF demo from PAP-Technology", Right = "Trang [page] trong [toPage]", Line = true },
             };
 
             var doc = new HtmlToPdfDocument()
