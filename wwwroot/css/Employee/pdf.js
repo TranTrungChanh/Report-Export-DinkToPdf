@@ -1,13 +1,26 @@
 ﻿function generalPdfFile(id) {
+    //$.ajax({
+    //    url: "/Home/ExportPdf",
+    //    data: {
+    //        id: id
+    //    },
+    //    type: "POST",
+    //    success: function (result) {
+    //        downloadPdfFile(result);
+    //    },
+    //    error: function (err) {
+    //        console.log(err);
+    //    }
+    //});
     $.ajax({
-        url: "/Home/ExportPdf",
+        url: "/Home/Printing",
+        type: "POST",
         data: {
             id: id
         },
-        type: "POST",
         success: function (result) {
             debugger
-            downloadPdfFile(result);
+            //downloadPdfFile(result);
         },
         error: function (err) {
             console.log(err);

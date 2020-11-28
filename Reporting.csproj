@@ -7,6 +7,7 @@
   <ItemGroup>
     <PackageReference Include="DinkToPdf" Version="1.0.8" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+    <PackageReference Include="Neodynamic.SDK.WebClientPrint" Version="5.0.0" />
   </ItemGroup>
 
 </Project>
