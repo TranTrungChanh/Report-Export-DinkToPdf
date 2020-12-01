@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Demo\\Demo Print\\Report-Export-DinkToPdf\\Reporting.csproj": {}
+    "D:\\ExportPdf\\Report-Export-DinkToPdf\\Reporting.csproj": {}
   },
   "projects": {
-    "D:\\Demo\\Demo Print\\Report-Export-DinkToPdf\\Reporting.csproj": {
+    "D:\\ExportPdf\\Report-Export-DinkToPdf\\Reporting.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Demo\\Demo Print\\Report-Export-DinkToPdf\\Reporting.csproj",
+        "projectUniqueName": "D:\\ExportPdf\\Report-Export-DinkToPdf\\Reporting.csproj",
         "projectName": "Reporting",
-        "projectPath": "D:\\Demo\\Demo Print\\Report-Export-DinkToPdf\\Reporting.csproj",
-        "packagesPath": "C:\\Users\\chanh\\.nuget\\packages\\",
-        "outputPath": "D:\\Demo\\Demo Print\\Report-Export-DinkToPdf\\obj\\",
+        "projectPath": "D:\\ExportPdf\\Report-Export-DinkToPdf\\Reporting.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\ExportPdf\\Report-Export-DinkToPdf\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\chanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -72,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
