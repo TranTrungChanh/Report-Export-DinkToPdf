@@ -34,6 +34,20 @@ namespace Reporting
             services.AddTransient<IPdfConverter, PdfConverterAppService>();
 
             services.AddSingleton(typeof(IConverter), new SynchronizedConverter(new PdfTools()));
+
+            services.AddSession(options =>
+            {
+                // Set a short timeout for easy testing.
+                options.IdleTimeout = TimeSpan.FromSeconds(10);
+                options.Cookie.HttpOnly = true;
+            });
+
+            //services.Configure<CookiePolicyOptions>(options =>
+            //{
+            //    // This lambda determines whether user consent for non-essential cookies is needed for a given request.
+            //    options.CheckConsentNeeded = context => true;
+            //    options.MinimumSameSitePolicy = SameSiteMode.None;
+            //});
             //services.AddControllers();
         }
 
@@ -56,6 +70,8 @@ namespace Reporting
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {
