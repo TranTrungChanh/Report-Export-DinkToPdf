@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Demo\\Demo Print\\Report-Export-DinkToPdf\\Reporting.csproj": {}
+    "D:\\Demo\\Demo Print\\Report-Export-DinkToPdf\\v5.0\\WebClientPrint5-Sample\\WCPAspNetCoreMvcCS\\WCPAspNetCoreMvcCS.csproj": {}
   },
   "projects": {
-    "D:\\Demo\\Demo Print\\Report-Export-DinkToPdf\\Reporting.csproj": {
+    "D:\\Demo\\Demo Print\\Report-Export-DinkToPdf\\v5.0\\WebClientPrint5-Sample\\WCPAspNetCoreMvcCS\\WCPAspNetCoreMvcCS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Demo\\Demo Print\\Report-Export-DinkToPdf\\Reporting.csproj",
-        "projectName": "Reporting",
-        "projectPath": "D:\\Demo\\Demo Print\\Report-Export-DinkToPdf\\Reporting.csproj",
+        "projectUniqueName": "D:\\Demo\\Demo Print\\Report-Export-DinkToPdf\\v5.0\\WebClientPrint5-Sample\\WCPAspNetCoreMvcCS\\WCPAspNetCoreMvcCS.csproj",
+        "projectName": "WCPAspNetCoreMvcCS",
+        "projectPath": "D:\\Demo\\Demo Print\\Report-Export-DinkToPdf\\v5.0\\WebClientPrint5-Sample\\WCPAspNetCoreMvcCS\\WCPAspNetCoreMvcCS.csproj",
         "packagesPath": "C:\\Users\\chanh\\.nuget\\packages\\",
-        "outputPath": "D:\\Demo\\Demo Print\\Report-Export-DinkToPdf\\obj\\",
+        "outputPath": "D:\\Demo\\Demo Print\\Report-Export-DinkToPdf\\v5.0\\WebClientPrint5-Sample\\WCPAspNetCoreMvcCS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -41,13 +41,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "DinkToPdf": {
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[1.0.8, )"
+              "version": "[2.1.2, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[3.1.4, )"
+              "version": "[2.1.9, )"
             },
             "Neodynamic.SDK.WebClientPrint": {
               "target": "Package",
